@@ -1,0 +1,68 @@
+<!doctype html>
+<title>My html</title>
+<meta http-equiv="X-UA-Compatible" >
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<body>
+<div class="mainBody" id="node1">
+    <h1>node1</h1>
+    <div class="oneBody">
+        <div class="mainBody">
+            <h1>node2</h1>
+            <div class="oneBody">
+                <div class="mainBody">
+                    <h1>node3</h1>
+                    <div class="oneBody">
+                        <div class="mainBody">
+                            <h1>node4</h1>
+                        </div>
+                        <div class="mainBody">
+                            <h1>node4</h1>
+                        </div>
+                        <div class="mainBody">
+                            <h1>node4</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainBody">
+                    <h1>node3</h1>
+                </div>
+                <div class="mainBody">
+                    <h1>node3</h1>
+                </div>
+            </div>
+        </div>
+        <div class="mainBody"><h1>node2</h1></div>
+        <div class="mainBody"><h1>node2</h1></div>
+    </div>
+</div>
+<style>
+.mainBody{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start ;
+}
+.sbody{
+ 
+}
+.oneBody{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#node1{
+    /*height: 200px;*/
+    margin-top: 100px;
+    margin-left: 100px;
+}
+h1{
+    line-height: 100%;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+</style>
+</body>
