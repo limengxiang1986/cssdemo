@@ -70,34 +70,37 @@
         -moz-transition:width 2s; /* Firefox 4 */
         -webkit-transition:width 2s; /* Safari and Chrome */
         -o-transition:width 2s; /* Opera */
-        animation:mymove 0.2s 3;
-        -webkit-animation:mymove 0.2s 3; /*Safari and Chrome*/
+    }
+    .whyhightlight{
+        animation:mymove 2.2s 1;
+        -webkit-animation:mymove 2.2s 1; /*Safari and Chrome*/
     }
     .why:hover {
         border: 1px solid #fff;
         /* box-shadow: 0px 0px 0px 2px #ccc; */
         /* box-shadow: 0 0px 5px 5px #ccc; */
+        z-index:4;
         width:260px;
-        background-color : bisque;
+        /* background-color : bisque; */
         box-shadow:
-        -2px 0 2px 2px rgba(213, 255, 145, 0.5),
-        0px -2px 2px 5px rgba(145, 255, 191, 0.5),
-        2px 0 2px 5px rgba(82, 255, 220, 0.5),
-        0 2px 2px 5px rgba(239, 255, 91, 0.5);
+        -8px 0 8px 8px rgba(213, 255, 145, 0.5),
+        0px -8px 8px 8px rgba(145, 255, 191, 0.5),
+        8px 0 8px 8px rgba(82, 255, 220, 0.5),
+        0 8px 8px 8px rgba(239, 255, 91, 0.5);
     }
     .why:active{
-        background-color: #fcc;
+        /* background-color: #fcc; */
     }
     @keyframes mymove
     {
-        from {background-color:orange;}
-        to {background-color:#fff;}
+        from {box-shadow:0px 0px 3px 3px rgba(213, 255, 145, 0.5)}
+        to {box-shadow:0px 0 0px 0px #fff}
     }
 
     @-webkit-keyframes mymove /*Safari and Chrome*/
     {
-        from {background-color:orange;}
-        to {background-color:#fff;}
+        from {box-shadow:0px 0px 3px 3px rgba(213, 255, 145, 0.5)}
+        to {box-shadow:0px 0 0px 0px #fff}
     }
     .routeescapecauseaps{
         display: flex;

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<title>Hover.css纯CSS3鼠标滑过特效动画库_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	</head>
+	<body>
+
+		<!--[if lt IE 10]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+
+		<h1>Hover.css</h1>
+
+		<p class="intro"></p>
+
+		
+		<div class="effects">
+            <div class="hvr-outline-in">hvr-outline-in</div>
+        </div>
+	</body>
+</html>
+<style>
+.hvr-outline-in {
+  display: inline-block;
+  vertical-align: middle;
+  left: 150px;
+  -webkit-transform: translateZ(0);
+  /* transform: translateZ(0); */
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  border: 1px solid #ccc;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+.hvr-outline-in:hover {
+  transform: scale(1.1);           /*当前元素，hover时，放大1.1倍*/
+  transition-duration: 0.3s;  /*定义当前元素的动画时间*/
+}
+ .hvr-outline-in:before {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  border: #e1e1e1 solid 4px;
+  top: -16px;
+  right: -16px;
+  bottom: -16px;
+  left: -16px;
+  opacity: 0;
+  -webkit-transition-duration: 0.3s; 
+  /* 未定义trasition-property，针对所有的属性，all*/
+  transition-duration: 0.3s;                   /* 动画的duration， */
+  transition-timing-function: linear;      /*linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n);*/
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left;
+}
+.hvr-outline-in:hover:before, .hvr-outline-in:focus:before, .hvr-outline-in:active:before {  /*对于before元素，当hover，focus，active时的transition */
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  opacity: 1;
+}
+
+</style>
